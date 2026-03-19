@@ -41,7 +41,8 @@ jobs:
           name: react-build
           path: ./dist
       - name: Run tests
+        run: npm test -- -- watchAll=false
+      - name: Check build file exists
         run: |
-          npm test -- -- watchAll=false
           test -f ./dist/index.html
           echo "Build file exists!"
