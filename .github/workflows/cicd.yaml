@@ -40,3 +40,8 @@ jobs:
         with:
           name: react-build
           path: ./dist
+      - name: Run tests
+        run: |
+          npm test -- -- watchAll=false
+          test -f ./dist/index.html
+          echo "Build file exists!"
