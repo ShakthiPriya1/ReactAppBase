@@ -54,14 +54,6 @@ jobs:
       AZURE_CREDENTIALS: devopstrainingregistry
       RESOURCE_GROUP: 1-91bc165a-playground-sandbox
       CONTAINER_APP_NAME: devops-training-container-app
-
-  deploy-to-azure:
-    runs-on: ubuntu-latest
-    needs: test
-    env:
-      AZURE_CONTAINER_REGISTRY: devopshorizonregistry
-      RESOURCE_GROUP: 1-3571bf29-playground-sandbox
-      CONTAINER_APP_NAME: devops-horizon-container-app
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
