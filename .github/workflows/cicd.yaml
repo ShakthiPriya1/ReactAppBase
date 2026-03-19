@@ -50,8 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     env:
-      AZURE_CONTAINER_REGISTRY:
-      AZURE_CREDENTIALS: devopstrainingregistry
+      AZURE_CONTAINER_REGISTRY: devopstrainingregistry
       RESOURCE_GROUP: 1-91bc165a-playground-sandbox
       CONTAINER_APP_NAME: devops-training-container-app
     steps:
